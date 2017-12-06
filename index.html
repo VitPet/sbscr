@@ -59,7 +59,8 @@
 		color: #aaa;
 		font-weight: bold;
 	 	-webkit-transition: -webkit-transform .4s;
-		transition: all .4s;
+		transition: width 1s,
+					opacity 0.3s linear;
 
 	}
 
@@ -77,9 +78,9 @@
 		border: none!important;
 		text-align: center;
         border-radius: 5px;	
-      	transition: width .2s,
+      	transition: width 1s,
       				background .4s,
-      				margin .3s; 
+					margin 1s;
   	}
 	
  	.animate-input {
@@ -100,7 +101,8 @@
 		width: 40px; 
 	}
 	.finish{
-		width: 0px;
+		width: 0;
+		opacity: 0;
 	}
 
 	</style>
@@ -130,40 +132,13 @@
 			$(".button").toggleClass("success");
 			$(".input").toggleClass("finish");
 		  	$('.button').attr("disabled", "disabled");
-
-		  	return 0;
-			
+		 	return 0;	
 		}
 		
 		$(".input").toggleClass("animate-input");
 		$(".button").text("");
 		$(".button").toggleClass("animate-button fa fa-long-arrow-right");
 		$( ".input" ).focus();
-
-
-
-		
-		/*if($("button").is(".fa-long-arrow-right")){
-			$(".button").removeClass("fa fa-long-arrow-right");
-			$(".button").addClass("fa fa-check");
-			$(".input").toggleClass("animate-input");
-			$(".button").toggleClass("animate-button");
-			$(".button").toggleClass("success");
-			$(".form-cont").toggleClass("bigger");
-			$(".input").css("display", "none");
-		  	$('.button').attr("disabled", "disabled");
-		  
-
-
-			return 0;
-		}
-		
-		$(".input").toggleClass("animate-input");
-		$(".button").toggleClass("animate-button fa fa-long-arrow-right");
-		$(".form-cont").toggleClass("bigger");
-
-		$(".button").text("")*/
-		
 		
 	});	
 
